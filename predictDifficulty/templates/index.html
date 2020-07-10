@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/Styles.css') }}">
+</head>
+<body>
+        <header>
+            <h2>Question Difficulty Predictor</h2>
+        </header>
+        <h2>You can select the file (csv) and click Submit button</h2></div>
+            <div class="upload_form_cont">
+                <form id="upload_form"  action = "{{ url_for('predict')}}" method = "POST" enctype="multipart/form-data" >
+                    <div>
+                        <div><label for="file">Please select file</label></div>
+                        <div><input type="file" name="file" type = "csv"/></div>
+                        <input type="submit"/>
+                    </div>
+                    {{Predict}}
+            </div>
+    </body>
+</html>
